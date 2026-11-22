@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Evidence-Based PT</title>
+<meta name="description" content="The key research numbers physical therapists need, at a glance.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* VOICE work: a clinician's pocket reference, calm and exact
+   IDEA the laminated pocket card a PT keeps in a scrub pocket
+   PICTURE the search box and cards themselves; numbers set large
+   COLOUR white ground, near-black ink, one deep clinical red for key numbers
+   TYPE Gentium Plus throughout, Cambria fallback
+   LAYOUT title + search across the top, hub tabs, card grid; one column on phones */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#121417);--ink:light-dark(#17191d,#ece9e3);--soft:light-dark(#5b5f66,#a7a59f);--rule:light-dark(#e3e1dc,#2b2e33);--card:light-dark(#fbfaf7,#1a1d21);--acc:light-dark(#a3161a,#ff7a6e);--good:light-dark(#1d5c3a,#7fd3a1);--bad:light-dark(#a3161a,#ff7a6e)}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:16px}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.5 "Gentium Plus",Cambria,Georgia,serif;overflow-x:clip}
+.wrap{max-width:1240px;margin:0 auto;padding:0 max(4vw,16px)}
+header{border-bottom:1px solid var(--rule);padding:clamp(22px,4vw,44px) 0 18px}
+h1{font-size:clamp(32px,5vw,46px);line-height:1.05;letter-spacing:-.01em;margin:0 0 6px}
+.sub{color:var(--soft);margin:0 0 18px}
+.search{position:relative}
+.search input{width:100%;font:inherit;font-size:20px;padding:14px 16px 14px 48px;border:2px solid var(--ink);border-radius:10px;background:var(--bg);color:var(--ink)}
+.search input:focus{outline:3px solid color-mix(in srgb,var(--acc) 45%,transparent);outline-offset:2px}
+.search svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);width:22px;height:22px;stroke:var(--soft)}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+nav a{font-size:17px;text-decoration:none;color:var(--ink);padding:9px 16px;border:1px solid var(--rule);border-radius:999px;min-height:44px;display:inline-flex;align-items:center}
+nav a[aria-current=true]{background:var(--ink);color:var(--bg);border-color:var(--ink);font-weight:700}
+nav a:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+main{padding:18px 0 40px}
+.hubhead{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin:8px 0 4px}
+.hubhead h2{font-size:30px;line-height:1.1;margin:0}
+.hubhead p{margin:0;color:var(--soft)}
+section{margin-top:26px}
+h3{font-size:19px;margin:0 0 10px;padding-bottom:6px;border-bottom:1px solid var(--rule)}
+h3.not{color:var(--bad)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr));gap:14px;align-items:start}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:16px 18px 14px;display:flex;flex-direction:column}
+.card h4{font-size:20px;line-height:1.2;margin:0 0 10px}
+.hubtag{font-size:14px;color:var(--soft);margin:-6px 0 8px}
+dl{margin:0 0 10px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 14px;align-items:baseline}
+dt{color:var(--soft);font-size:16px}
+dd{margin:0;font-size:21px;font-weight:700;color:var(--acc);text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.card.not dd{color:var(--bad)}
+.card.works dd,.card.guide dd{color:var(--good)}
+table{border-collapse:collapse;width:100%;margin:0 0 10px;font-variant-numeric:tabular-nums}
+th,td{padding:4px 6px;border-bottom:1px solid var(--rule);text-align:right;font-size:16px}
+th{color:var(--soft);font-weight:400}
+th:first-child,td:first-child{text-align:left}
+td:not(:first-child){font-weight:700;color:var(--acc)}
+.note{margin:0 0 10px;font-size:16px}
+.src{margin-top:auto;font-size:14px;color:var(--soft);line-height:1.4}
+.src a{color:var(--soft)}
+.src a:hover{color:var(--ink)}
+.empty{padding:30px 0;color:var(--soft)}
+footer{border-top:1px solid var(--rule);padding:18px 0 32px;color:var(--soft);font-size:14px}
+mark{background:color-mix(in srgb,var(--acc) 22%,transparent);color:inherit;border-radius:2px}
+@media(max-width:600px){body{font-size:16px}.search input{font-size:18px}dd{font-size:19px}h1{font-size:34px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Evidence-Based PT</h1>
+    <p class="sub">The research numbers that matter, at a glance. Every number links to its source.</p>
+    <label class="search" for="q">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>
+      <input id="q" type="search" placeholder="Search: Berg, TUG, stenosis, TENS…" autocomplete="off" aria-label="Search">
+    </label>
+    <nav id="tabs" aria-label="Topics"></nav>
+  </div>
+</header>
+<main class="wrap" id="main"><p class="empty">Loading…</p></main>
+<footer class="wrap" id="foot">Prototype. Numbers were checked against the linked sources but should be confirmed before clinical decisions. This is a reference, not medical advice.</footer>
+<script>
+{
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let D = null, hub = 'falls';
+
+const hl = (s, q) => {
+  const t = esc(s);
+  if (!q) return t;
+  const re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'ig');
+  return t.replace(re, '<mark>$1</mark>');
+};
+
+const card = (c, q, showHub) => {
+  const h = D.hubs.find(x => x.id === c.hub);
+  const nums = c.nums && c.nums.length ? '<dl>' + c.nums.map(([k, v]) => `<dt>${hl(k, q)}</dt><dd>${esc(v)}</dd>`).join('') + '</dl>' : '';
+  const tbl = c.table ? `<table><thead><tr>${c.table.head.map(x => `<th>${esc(x)}</th>`).join('')}</tr></thead><tbody>${c.table.rows.map(r => `<tr>${r.map(x => `<td>${esc(x)}</td>`).join('')}</tr>`).join('')}</tbody></table>` : '';
+  const src = c.src.map(([t, u]) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a>`).join(' · ');
+  return `<article class="card ${c.cat}"><h4>${hl(c.title, q)}</h4>${showHub ? `<p class="hubtag">${esc(h.name)}</p>` : ''}${nums}${tbl}<p class="note">${hl(c.note, q)}</p><p class="src">Source: ${src}</p></article>`;
+};
+
+const sections = (list, q, showHub) => D.cats.map(cat => {
+  const cs = list.filter(c => c.cat === cat.id);
+  if (!cs.length) return '';
+  return `<section><h3 class="${cat.id === 'not' ? 'not' : ''}">${esc(cat.name)}</h3><div class="grid">${cs.map(c => card(c, q, showHub)).join('')}</div></section>`;
+}).join('');
+
+const render = () => {
+  const q = $('#q').value.trim();
+  $('#tabs').innerHTML = D.hubs.map(h => `<a href="#${h.id}" aria-current="${!q && h.id === hub}">${esc(h.name)}</a>`).join('');
+  if (q) {
+    const ql = q.toLowerCase();
+    const hits = D.cards.filter(c => [c.title, c.note, c.tags, (c.nums || []).flat().join(' ')].join(' ').toLowerCase().includes(ql));
+    $('#main').innerHTML = hits.length
+      ? `<div class="hubhead"><h2>${hits.length} result${hits.length > 1 ? 's' : ''}</h2><p>for “${esc(q)}”</p></div>` + sections(hits, q, true)
+      : `<p class="empty">Nothing for “${esc(q)}” yet. Try a test name (Berg, TUG), a condition (stenosis) or a treatment (tai chi).</p>`;
+    return;
+  }
+  const h = D.hubs.find(x => x.id === hub);
+  $('#main').innerHTML = `<div class="hubhead"><h2>${esc(h.name)}</h2><p>${esc(h.blurb)}</p></div>` + sections(D.cards.filter(c => c.hub === hub), '', false);
+};
+
+const route = () => {
+  const id = location.hash.slice(1);
+  if (D && D.hubs.some(h => h.id === id)) { hub = id; $('#q').value = ''; }
+  if (D) render();
+};
+
+$('#q').addEventListener('input', render);
+window.addEventListener('hashchange', route);
+document.addEventListener('keydown', e => { if (e.key === '/' && document.activeElement !== $('#q')) { e.preventDefault(); $('#q').focus(); } });
+
+fetch('data/cards.json')
+  .then(r => r.json())
+  .then(d => { D = d; $('#foot').textContent += ` Last reviewed ${d.updated}.`; route(); })
+  .catch(() => { $('#main').innerHTML = '<p class="empty">Could not load the data file. If you opened this file directly, view it through a web server or GitHub Pages instead.</p>'; });
+}
+</script>
+</body>
+</html>
