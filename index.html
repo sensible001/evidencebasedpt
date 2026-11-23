@@ -4,35 +4,39 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Evidence-Based PT</title>
-<meta name="description" content="The key research numbers physical therapists need, at a glance.">
+<meta name="description" content="The key research numbers physical therapists need, at a glance, kept current.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 /* VOICE work: a clinician's pocket reference, calm and exact
-   IDEA the laminated pocket card a PT keeps in a scrub pocket
-   PICTURE the search box and cards themselves; numbers set large
-   COLOUR white ground, near-black ink, one deep clinical red for key numbers
-   TYPE Gentium Plus throughout, Cambria fallback
-   LAYOUT title + search across the top, hub tabs, card grid; one column on phones */
-:root{color-scheme:light dark;--bg:light-dark(#ffffff,#121417);--ink:light-dark(#17191d,#ece9e3);--soft:light-dark(#5b5f66,#a7a59f);--rule:light-dark(#e3e1dc,#2b2e33);--card:light-dark(#fbfaf7,#1a1d21);--acc:light-dark(#a3161a,#ff7a6e);--good:light-dark(#1d5c3a,#7fd3a1);--bad:light-dark(#a3161a,#ff7a6e)}
-:root[data-theme=light]{color-scheme:light}
-:root[data-theme=dark]{color-scheme:dark}
+   IDEA the laminated pocket card a PT keeps in a scrub pocket, with its evidence folded inside
+   PICTURE the search box and cards themselves; takeaway first, numbers set large
+   COLOUR Pagemarks palette: warm paper, white cards, green accent, amber and brick for caution
+   TYPE Gentium Plus throughout, Cambria fallback (same as Pagemarks)
+   LAYOUT title + search, topic tabs, what's-new strip, card grid; one column on phones */
+:root{color-scheme:light;--bg:#faf8f3;--ink:#2b2a27;--soft:#6f6a60;--rule:#e4dfd4;--card:#ffffff;--good:#2f5d50;--goodbg:#e6efe9;--warn:#7a5a12;--warnbg:#fdf3dc;--bad:#a33a2b;--badbg:#f7e4df;--neu:#efece5}
 *{box-sizing:border-box;min-width:0}
 html{scroll-padding-top:16px}
 body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.5 "Gentium Plus",Cambria,Georgia,serif;overflow-x:clip}
+a{color:var(--good)}
 .wrap{max-width:1240px;margin:0 auto;padding:0 max(4vw,16px)}
 header{border-bottom:1px solid var(--rule);padding:clamp(22px,4vw,44px) 0 18px}
 h1{font-size:clamp(32px,5vw,46px);line-height:1.05;letter-spacing:-.01em;margin:0 0 6px}
 .sub{color:var(--soft);margin:0 0 18px}
-.search{position:relative}
-.search input{width:100%;font:inherit;font-size:20px;padding:14px 16px 14px 48px;border:2px solid var(--ink);border-radius:10px;background:var(--bg);color:var(--ink)}
-.search input:focus{outline:3px solid color-mix(in srgb,var(--acc) 45%,transparent);outline-offset:2px}
+.search{position:relative;display:block}
+.search input{width:100%;font:inherit;font-size:20px;padding:14px 16px 14px 48px;border:1px solid #cfc8b9;border-radius:10px;background:var(--card);color:var(--ink);box-shadow:0 1px 2px rgba(43,42,39,.06)}
+.search input:focus{outline:3px solid color-mix(in srgb,var(--good) 40%,transparent);outline-offset:2px}
 .search svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);width:22px;height:22px;stroke:var(--soft)}
 nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-nav a{font-size:17px;text-decoration:none;color:var(--ink);padding:9px 16px;border:1px solid var(--rule);border-radius:999px;min-height:44px;display:inline-flex;align-items:center}
-nav a[aria-current=true]{background:var(--ink);color:var(--bg);border-color:var(--ink);font-weight:700}
-nav a:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+nav a{font-size:17px;text-decoration:none;color:var(--ink);background:var(--card);padding:9px 16px;border:1px solid var(--rule);border-radius:999px;min-height:44px;display:inline-flex;align-items:center}
+nav a[aria-current=true]{background:var(--good);color:#fff;border-color:var(--good);font-weight:700}
+nav a:focus-visible{outline:3px solid var(--good);outline-offset:2px}
+.news{margin-top:18px;background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:12px 16px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 16px;align-items:baseline}
+.news h2{font-size:17px;margin:0;color:var(--good);white-space:nowrap}
+.news ul{list-style:none;margin:0;padding:0}
+.news li{font-size:16px;padding:2px 0}
+.news time{color:var(--soft);white-space:nowrap;margin-right:8px}
 main{padding:18px 0 40px}
 .hubhead{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin:8px 0 4px}
 .hubhead h2{font-size:30px;line-height:1.1;margin:0}
@@ -40,28 +44,49 @@ main{padding:18px 0 40px}
 section{margin-top:26px}
 h3{font-size:19px;margin:0 0 10px;padding-bottom:6px;border-bottom:1px solid var(--rule)}
 h3.not{color:var(--bad)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr));gap:14px;align-items:start}
-.card{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:16px 18px 14px;display:flex;flex-direction:column}
-.card h4{font-size:20px;line-height:1.2;margin:0 0 10px}
-.hubtag{font-size:14px;color:var(--soft);margin:-6px 0 8px}
-dl{margin:0 0 10px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 14px;align-items:baseline}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:14px;align-items:start}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:16px 18px 12px;scroll-margin-top:16px}
+@media(min-width:1000px){.grid>.card:only-child{grid-column:span 2}}
+.card.flash{box-shadow:0 0 0 3px color-mix(in srgb,var(--good) 45%,transparent)}
+.card h4{font-size:20px;line-height:1.2;margin:0 0 8px}
+.tag{display:inline-block;font-size:13px;font-weight:700;border-radius:999px;padding:1px 9px;margin-left:6px;vertical-align:3px;white-space:nowrap}
+.tag.upd{color:var(--good);background:var(--goodbg)}
+.badges{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
+.badge{font-size:14px;border-radius:6px;padding:2px 8px;line-height:1.4}
+.badge b{font-weight:700}
+.t-high{background:var(--goodbg);color:var(--good)}
+.t-mod{background:var(--warnbg);color:var(--warn)}
+.t-low{background:var(--badbg);color:var(--bad)}
+.t-neutral{background:var(--neu);color:var(--soft)}
+.t-differ{background:var(--warnbg);color:var(--warn)}
+.take{font-weight:700;font-size:17px;line-height:1.4;margin:0 0 10px}
+dl{margin:0 0 10px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 14px;align-items:baseline;border-top:1px solid var(--rule);padding-top:8px}
 dt{color:var(--soft);font-size:16px}
-dd{margin:0;font-size:21px;font-weight:700;color:var(--acc);text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+dd{margin:0;font-size:20px;font-weight:700;text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
 .card.not dd{color:var(--bad)}
-.card.works dd,.card.guide dd{color:var(--good)}
 table{border-collapse:collapse;width:100%;margin:0 0 10px;font-variant-numeric:tabular-nums}
 th,td{padding:4px 6px;border-bottom:1px solid var(--rule);text-align:right;font-size:16px}
 th{color:var(--soft);font-weight:400}
 th:first-child,td:first-child{text-align:left}
-td:not(:first-child){font-weight:700;color:var(--acc)}
+td:not(:first-child){font-weight:700}
 .note{margin:0 0 10px;font-size:16px}
-.src{margin-top:auto;font-size:14px;color:var(--soft);line-height:1.4}
-.src a{color:var(--soft)}
-.src a:hover{color:var(--ink)}
+.differ{margin:0 0 10px;font-size:15px;background:var(--warnbg);color:var(--warn);border-radius:6px;padding:6px 10px}
+details{border-top:1px solid var(--rule);margin-top:4px}
+summary{cursor:pointer;padding:8px 0 4px;font-size:15px;color:var(--good);font-weight:700;list-style-position:inside;min-height:36px}
+summary:focus-visible{outline:2px solid var(--good);outline-offset:2px}
+.studies{list-style:none;margin:0;padding:0 0 4px}
+.studies li{padding:8px 0;border-bottom:1px solid var(--rule);font-size:15px}
+.studies li:last-child{border-bottom:0}
+.studies .cite{font-weight:700}
+.studies .meta{color:var(--soft)}
+.studies .rate{display:inline-block;font-size:13px;margin-top:2px}
+.stamp{font-size:13px;color:var(--soft);margin:6px 0 0}
 .empty{padding:30px 0;color:var(--soft)}
-footer{border-top:1px solid var(--rule);padding:18px 0 32px;color:var(--soft);font-size:14px}
-mark{background:color-mix(in srgb,var(--acc) 22%,transparent);color:inherit;border-radius:2px}
-@media(max-width:600px){body{font-size:16px}.search input{font-size:18px}dd{font-size:19px}h1{font-size:34px}}
+mark{background:var(--goodbg);color:inherit;border-radius:2px}
+footer{border-top:1px solid var(--rule);padding:18px 0 32px;color:var(--soft);font-size:15px}
+footer h2{font-size:17px;color:var(--ink);margin:0 0 6px}
+footer p{margin:0 0 10px;max-width:75ch}
+@media(max-width:600px){body{font-size:16px}.search input{font-size:18px}dd{font-size:18px}.news{grid-template-columns:minmax(0,1fr)}}
 </style>
 </head>
 <body>
@@ -74,14 +99,24 @@ mark{background:color-mix(in srgb,var(--acc) 22%,transparent);color:inherit;bord
       <input id="q" type="search" placeholder="Search: Berg, TUG, stenosis, TENS…" autocomplete="off" aria-label="Search">
     </label>
     <nav id="tabs" aria-label="Topics"></nav>
+    <div class="news" id="news" hidden></div>
   </div>
 </header>
 <main class="wrap" id="main"><p class="empty">Loading…</p></main>
-<footer class="wrap" id="foot">Prototype. Numbers were checked against the linked sources but should be confirmed before clinical decisions. This is a reference, not medical advice.</footer>
+<footer class="wrap">
+  <h2>About the ratings</h2>
+  <p><b>GRADE</b> (high, moderate, low, very low) is the system Cochrane, the WHO and most guidelines use to rate how sure we can be of a finding. When a Cochrane review or guideline has rated the evidence, the card shows their rating and names them. Guideline cards show the guideline's own strength of recommendation.</p>
+  <p><b>Not formally graded</b> means no review or guideline has rated it yet, which is common for test cutoffs and change scores. Each study still shows its design and size, so you can judge it yourself.</p>
+  <p id="foot">A reference for clinicians, not medical advice. Confirm numbers against the linked sources before clinical decisions.</p>
+</footer>
 <script>
 {
 const $ = s => document.querySelector(s);
-const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const fmtDate = iso => { const [y, m, d] = iso.split('-').map(Number); return `${MONTHS[m - 1]} ${d}, ${y}`; };
+const fmtMonth = iso => { const [y, m] = iso.split('-').map(Number); return `${MONTHS[m - 1]} ${y}`; };
+const recent = iso => iso && (Date.now() - Date.parse(iso)) < 30 * 864e5;
 let D = null, hub = 'falls';
 
 const hl = (s, q) => {
@@ -91,12 +126,30 @@ const hl = (s, q) => {
   return t.replace(re, '<mark>$1</mark>');
 };
 
+const study = s => `<li><a class="cite" href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.cite)}</a><br>
+  <span class="meta">${esc([s.design, s.n].filter(Boolean).join(' · '))}</span><br>
+  ${esc(s.finding)}<br>
+  <span class="rate badge ${/GRADE high|1A|strong/i.test(s.rating) ? 't-high' : /moderate/i.test(s.rating) ? 't-mod' : /low/i.test(s.rating) ? 't-low' : 't-neutral'}">${esc(s.rating)}</span></li>`;
+
 const card = (c, q, showHub) => {
   const h = D.hubs.find(x => x.id === c.hub);
+  const years = c.studies.map(s => s.year).filter(Boolean);
+  const newest = years.length ? Math.max(...years) : null;
   const nums = c.nums && c.nums.length ? '<dl>' + c.nums.map(([k, v]) => `<dt>${hl(k, q)}</dt><dd>${esc(v)}</dd>`).join('') + '</dl>' : '';
   const tbl = c.table ? `<table><thead><tr>${c.table.head.map(x => `<th>${esc(x)}</th>`).join('')}</tr></thead><tbody>${c.table.rows.map(r => `<tr>${r.map(x => `<td>${esc(x)}</td>`).join('')}</tr>`).join('')}</tbody></table>` : '';
-  const src = c.src.map(([t, u]) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a>`).join(' · ');
-  return `<article class="card ${c.cat}"><h4>${hl(c.title, q)}</h4>${showHub ? `<p class="hubtag">${esc(h.name)}</p>` : ''}${nums}${tbl}<p class="note">${hl(c.note, q)}</p><p class="src">Source: ${src}</p></article>`;
+  const badges = `<div class="badges"><span class="badge t-${esc(c.badge.tone)}"><b>${esc(c.badge.label)}</b> · ${esc(c.badge.by)}</span>${c.differ ? '<span class="badge t-differ"><b>Studies differ</b></span>' : ''}</div>`;
+  const n = c.studies.length;
+  return `<article class="card ${c.cat}" id="${esc(c.id)}">
+    <h4>${hl(c.title, q)}${recent(c.updated) ? '<span class="tag upd">Updated</span>' : ''}</h4>
+    ${showHub ? `<p class="stamp" style="margin:-4px 0 8px">${esc(h.name)}</p>` : ''}
+    ${badges}
+    <p class="take">${hl(c.takeaway, q)}</p>
+    ${nums}${tbl}
+    ${c.note ? `<p class="note">${hl(c.note, q)}</p>` : ''}
+    ${c.differ ? `<p class="differ">${hl(c.differ, q)}</p>` : ''}
+    <details><summary>${n} ${n === 1 ? 'study' : 'studies'}${newest ? ` · newest ${newest}` : ''}</summary><ul class="studies">${[...c.studies].sort((a, b) => (b.year || 0) - (a.year || 0)).map(study).join('')}</ul></details>
+    <p class="stamp">Checked ${fmtMonth(c.updated || D.checked)}${newest ? ` · Newest study ${newest}` : ''}</p>
+  </article>`;
 };
 
 const sections = (list, q, showHub) => D.cats.map(cat => {
@@ -105,12 +158,19 @@ const sections = (list, q, showHub) => D.cats.map(cat => {
   return `<section><h3 class="${cat.id === 'not' ? 'not' : ''}">${esc(cat.name)}</h3><div class="grid">${cs.map(c => card(c, q, showHub)).join('')}</div></section>`;
 }).join('');
 
+const renderNews = () => {
+  const items = (D.changes || []).slice(0, 4);
+  if (!items.length) return;
+  $('#news').hidden = false;
+  $('#news').innerHTML = `<h2>What's new</h2><ul>${items.map(x => `<li><time datetime="${esc(x.date)}">${fmtDate(x.date)}</time>${x.card ? `<a href="#${esc(x.card)}">${esc(x.text)}</a>` : esc(x.text)}</li>`).join('')}</ul>`;
+};
+
 const render = () => {
   const q = $('#q').value.trim();
   $('#tabs').innerHTML = D.hubs.map(h => `<a href="#${h.id}" aria-current="${!q && h.id === hub}">${esc(h.name)}</a>`).join('');
   if (q) {
     const ql = q.toLowerCase();
-    const hits = D.cards.filter(c => [c.title, c.note, c.tags, (c.nums || []).flat().join(' ')].join(' ').toLowerCase().includes(ql));
+    const hits = D.cards.filter(c => [c.title, c.takeaway, c.note, c.differ, c.tags, (c.nums || []).flat().join(' '), c.studies.map(s => s.cite + ' ' + s.finding).join(' ')].join(' ').toLowerCase().includes(ql));
     $('#main').innerHTML = hits.length
       ? `<div class="hubhead"><h2>${hits.length} result${hits.length > 1 ? 's' : ''}</h2><p>for “${esc(q)}”</p></div>` + sections(hits, q, true)
       : `<p class="empty">Nothing for “${esc(q)}” yet. Try a test name (Berg, TUG), a condition (stenosis) or a treatment (tai chi).</p>`;
@@ -121,9 +181,16 @@ const render = () => {
 };
 
 const route = () => {
+  if (!D) return;
   const id = location.hash.slice(1);
-  if (D && D.hubs.some(h => h.id === id)) { hub = id; $('#q').value = ''; }
-  if (D) render();
+  const target = D.cards.find(c => c.id === id);
+  if (D.hubs.some(h => h.id === id)) { hub = id; $('#q').value = ''; }
+  else if (target) { hub = target.hub; $('#q').value = ''; }
+  render();
+  if (target) {
+    const el = document.getElementById(target.id);
+    if (el) { el.scrollIntoView({block: 'start'}); el.classList.add('flash'); setTimeout(() => el.classList.remove('flash'), 2000); }
+  }
 };
 
 $('#q').addEventListener('input', render);
@@ -132,7 +199,7 @@ document.addEventListener('keydown', e => { if (e.key === '/' && document.active
 
 fetch('data/cards.json')
   .then(r => r.json())
-  .then(d => { D = d; $('#foot').textContent += ` Last reviewed ${d.updated}.`; route(); })
+  .then(d => { D = d; renderNews(); $('#foot').textContent += ` Last checked ${fmtDate(d.checked)}.`; route(); })
   .catch(() => { $('#main').innerHTML = '<p class="empty">Could not load the data file. If you opened this file directly, view it through a web server or GitHub Pages instead.</p>'; });
 }
 </script>

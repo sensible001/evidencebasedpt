@@ -1,0 +1,17 @@
+{
+  "filter": "(systematic[sb] OR \"meta-analysis\"[pt] OR \"practice guideline\"[pt] OR \"guideline\"[pt] OR \"randomized controlled trial\"[pt]) AND english[lang] AND hasabstract",
+  "topics": [
+    {
+      "hub": "falls",
+      "query": "(\"accidental falls\"[MeSH Terms] OR \"fall risk\"[tiab] OR \"falls prevention\"[tiab] OR \"postural balance\"[MeSH Terms] OR \"balance test\"[tiab]) AND (\"aged\"[MeSH Terms] OR \"older adults\"[tiab] OR elderly[tiab]) AND (exercise[tiab] OR \"physical therapy\"[tiab] OR physiotherapy[tiab] OR rehabilitation[tiab] OR assessment[tiab] OR cutoff[tiab])"
+    },
+    {
+      "hub": "knee",
+      "query": "(\"osteoarthritis, knee\"[MeSH Terms] OR \"knee osteoarthritis\"[tiab] OR \"arthroplasty, replacement, knee\"[MeSH Terms] OR \"total knee arthroplasty\"[tiab] OR \"total knee replacement\"[tiab]) AND (exercise[tiab] OR \"physical therapy\"[tiab] OR physiotherapy[tiab] OR rehabilitation[tiab] OR \"clinically important\"[tiab] OR \"outcome measure\"[tiab])"
+    },
+    {
+      "hub": "back",
+      "query": "(\"low back pain\"[MeSH Terms] OR \"low back pain\"[tiab] OR \"spinal stenosis\"[MeSH Terms] OR \"lumbar stenosis\"[tiab]) AND (exercise[tiab] OR \"physical therapy\"[tiab] OR physiotherapy[tiab] OR rehabilitation[tiab] OR \"red flag\"[tiab] OR \"clinically important\"[tiab] OR diagnostic[tiab] OR prognosis[tiab])"
+    }
+  ]
+}

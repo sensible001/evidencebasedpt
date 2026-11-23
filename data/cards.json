@@ -1,248 +1,1274 @@
 {
-  "updated": "2026-11-21",
-  "hubs": [
-    {"id": "falls", "name": "Falls & balance", "blurb": "Older adults, community-dwelling"},
-    {"id": "knee", "name": "Knee OA & TKA", "blurb": "Knee osteoarthritis and total knee replacement"},
-    {"id": "back", "name": "Low back pain", "blurb": "Including spinal stenosis in older adults"}
-  ],
-  "cats": [
-    {"id": "dx", "name": "Diagnosis & special tests"},
-    {"id": "measures", "name": "Measures, cutoffs & change scores"},
-    {"id": "works", "name": "What works"},
-    {"id": "dose", "name": "Dose"},
-    {"id": "guide", "name": "Guideline grades"},
-    {"id": "not", "name": "What doesn't work"},
-    {"id": "flags", "name": "Red flags & when to refer"},
-    {"id": "prog", "name": "Prognosis & risk"}
-  ],
-  "cards": [
-    {"hub": "falls", "cat": "measures", "title": "Timed Up and Go (TUG)",
-     "nums": [["Fall-risk cutoff", "≥ 12 s"]],
-     "note": "CDC STEADI cutoff. Published cutoffs range from 12 to 16 s. Shuffling, en bloc turning or steadying on walls may signal a neurological problem worth further evaluation.",
-     "tags": "tug mobility gait steadi screen",
-     "src": [["CDC STEADI: TUG", "https://www.cdc.gov/steadi/pdf/steadi-assessment-tug-508.pdf"], ["STEADI risk score study, 2023", "https://pmc.ncbi.nlm.nih.gov/articles/PMC9940266"]]},
-
-    {"hub": "falls", "cat": "measures", "title": "30-second chair stand",
-     "nums": [],
-     "table": {"head": ["Age", "Men below", "Women below"], "rows": [["60–64", "14", "12"], ["65–69", "12", "11"], ["70–74", "12", "10"], ["75–79", "11", "10"], ["80–84", "10", "9"], ["85–89", "8", "8"], ["90–94", "7", "4"]]},
-     "note": "A below-average score (fewer stands than shown) indicates fall risk. Arms crossed, 17-inch seat; if the patient must use their arms, the score is 0.",
-     "tags": "30s cst sit to stand chair rise strength norms steadi",
-     "src": [["CDC STEADI: 30-second chair stand", "https://www.nj.gov/humanservices/doas/forms/STEADI-Assessment-30Sec-508.pdf"]]},
-
-    {"hub": "falls", "cat": "measures", "title": "4-Stage Balance Test",
-     "nums": [["Fall-risk cutoff", "Tandem < 10 s"]],
-     "note": "Feet together, semi-tandem, tandem, single leg: 10 s each, no assistive device, eyes open. Unable to hold tandem for 10 s = increased fall risk.",
-     "tags": "4 stage four stage tandem stance static balance steadi",
-     "src": [["CDC STEADI: 4-Stage Balance", "https://www.cdc.gov/steadi/media/pdfs/STEADI-Assessment-4Stage-508.pdf"]]},
-
-    {"hub": "falls", "cat": "measures", "title": "Berg Balance Scale",
-     "nums": [["Fall-risk cutoff", "< 45 / 56"], ["Sensitivity at 45", "64%"], ["MDC (baseline 0–24)", "4.6 pts"]],
-     "note": "The 45 cutoff misses about a third of fallers. Better: fall history + Berg < 51, or no history + Berg < 42 (91% sensitive, 82% specific). MDC depends on starting score; see the source for other ranges.",
-     "tags": "bbs berg static dynamic balance",
-     "src": [["Shirley Ryan AbilityLab: Berg", "https://www.sralab.org/rehabilitation-measures/berg-balance-scale"], ["Donoghue 2009, MDC in older adults", "https://medicaljournals.se/jrm/content/html/10.2340/16501977-0337"]]},
-
-    {"hub": "falls", "cat": "measures", "title": "Gait speed",
-     "nums": [["Common fall-risk threshold", "< 1.0 m/s"], ["Poor outcomes", "< 0.8 m/s"], ["Small meaningful change", "0.05 m/s"], ["Substantial change", "0.10 m/s"]],
-     "note": "Often called the sixth vital sign. Change estimates are from community-dwelling older adults; values after hip fracture run higher (0.10–0.17 m/s for small change).",
-     "tags": "gait speed walking speed 10mwt 4m walk sixth vital sign",
-     "src": [["Perera 2006, JAGS", "https://pubmed.ncbi.nlm.nih.gov/16696738/"], ["Shirley Ryan AbilityLab: Gait speed", "https://www.sralab.org/rehabilitation-measures/gait-speed"], ["Gait speed and fall risk, 2023", "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10214622/"]]},
-
-    {"hub": "falls", "cat": "measures", "title": "6MWT & SPPB change",
-     "nums": [["6MWT small / substantial", "20 / 50 m"], ["SPPB small / substantial", "0.5 / 1.0 pt"]],
-     "note": "Best initial estimates of meaningful change in older adults.",
-     "tags": "6mwt six minute walk sppb short physical performance battery endurance",
-     "src": [["Perera 2006, JAGS", "https://pubmed.ncbi.nlm.nih.gov/16696738/"]]},
-
-    {"hub": "falls", "cat": "works", "title": "Exercise (all types)",
-     "nums": [["Rate of falls", "−23%"], ["Number of fallers", "−15%"], ["Certainty", "High"]],
-     "note": "59 trials, 12,981 people. Larger effect when delivered by a health professional, usually a physical therapist.",
-     "tags": "exercise fall prevention cochrane",
-     "src": [["Sherrington 2019, Cochrane", "https://pubmed.ncbi.nlm.nih.gov/30703272/"], ["Abridged review, BJSM", "https://www.ndorms.ox.ac.uk/publications/1077023"]]},
-
-    {"hub": "falls", "cat": "works", "title": "Balance + functional training",
-     "nums": [["Rate of falls", "−24%"], ["Certainty", "High"]],
-     "note": "Mainly balance and functional exercises (sit-to-stand, stepping). Programs combining balance/functional + resistance: −34% (moderate certainty).",
-     "tags": "balance functional training resistance strength multicomponent",
-     "src": [["Sherrington 2020, IJBNPA", "https://pmc.ncbi.nlm.nih.gov/articles/PMC7689963"]]},
-
-    {"hub": "falls", "cat": "works", "title": "Tai chi",
-     "nums": [["Rate of falls", "−23%"], ["Certainty", "Moderate"]],
-     "note": "9 trials. A good option to refer to once a patient finishes PT.",
-     "tags": "tai chi community program",
-     "src": [["Sherrington 2020, IJBNPA", "https://ijbnpa.biomedcentral.com/track/pdf/10.1186/s12966-020-01041-3"]]},
-
-    {"hub": "falls", "cat": "works", "title": "Otago Exercise Programme",
-     "nums": [["Rate of falls", "−32%"], ["Deaths over 12 mo", "−55%"]],
-     "note": "Home-based strength and balance program. 7 trials, 1,503 people, mean age 81.6. Rate ratio 0.68 for falls; risk ratio 0.45 for death.",
-     "tags": "otago home exercise program hep",
-     "src": [["Thomas 2010, Age and Ageing", "https://researchnow.flinders.edu.au/en/publications/does-the-otago-exercise-programme-reduce-mortality-and-falls-in-o/"]]},
-
-    {"hub": "falls", "cat": "dose", "title": "How much exercise",
-     "nums": [["Weekly dose", "3+ hours"], ["Frequency", "≥ 3× / week"], ["Duration", "≥ 12 weeks"], ["Effect at 3+ h/wk", "−42% falls"]],
-     "note": "Balance must be challenging and progressed. Continue longer for a greater effect; benefits fade within 3–6 months of stopping.",
-     "tags": "dose dosage frequency hours per week progression detraining",
-     "src": [["Sherrington 2020, IJBNPA", "https://pmc.ncbi.nlm.nih.gov/articles/PMC7689963"], ["World Falls Guidelines 2022", "https://pmc.ncbi.nlm.nih.gov/articles/PMC9523684/table/TB5"], ["MJA 2024 summary", "https://mja.com.au/node/20169"]]},
-
-    {"hub": "falls", "cat": "guide", "title": "World Falls Guidelines 2022",
-     "nums": [["Exercise program", "1A"], ["Assess gait & balance", "1B"], ["Deprescribe in long-term care", "1C"]],
-     "note": "Exercise: balance-challenging and functional, 3+ sessions a week, individualized, progressed for at least 12 weeks.",
-     "tags": "guideline wfg world falls montero-odasso grade",
-     "src": [["Montero-Odasso 2022, Age and Ageing", "https://pmc.ncbi.nlm.nih.gov/articles/PMC9523684/"]]},
-
-    {"hub": "falls", "cat": "not", "title": "Walking-only, resistance-only, dance",
-     "nums": [["Effect on falls", "Uncertain"]],
-     "note": "Not enough evidence that programs mainly of walking, resistance, dance or flexibility prevent falls. Brisk walking alone is best avoided as a falls program.",
-     "tags": "walking program resistance only dance flexibility ineffective",
-     "src": [["Cochrane 2019 summary", "https://www.cochrane.org/CD012424/BACK_exercise-preventing-falls-older-people-living-community"], ["JFSF 2018 program components", "https://pmc.ncbi.nlm.nih.gov/articles/PMC7155323/table/T1"]]},
-
-    {"hub": "falls", "cat": "flags", "title": "Orthostatic hypotension",
-     "nums": [["Positive", "SBP ↓ ≥ 20 or DBP ↓ ≥ 10"]],
-     "note": "Or dizziness, lying to standing. Measure after 5 min supine, then at 1 and 3 min standing. Raises fall risk about 73%; flag it to the physician.",
-     "tags": "orthostatic postural hypotension blood pressure dizziness",
-     "src": [["ACPM STEADI tool", "https://acpm.org/acpm-steadi-fall-risk-assessment-tool/"], ["CDC STEADI risk factor checklist", "https://www.cdc.gov/steadi/media/pdfs/steadi-form-riskfactorsck-508.pdf"]]},
-
-    {"hub": "falls", "cat": "flags", "title": "Medications & vision",
-     "nums": [["Vision flag", "< 20/40 or no exam in 1 yr"]],
-     "note": "Flag psychoactive drugs, opioids, and anything sedating or lowering blood pressure for physician review. Deprescribing high-risk drugs can cut fall injuries by about 35%.",
-     "tags": "medications polypharmacy frid deprescribing vision eye",
-     "src": [["CDC STEADI risk factor checklist", "https://www.cdc.gov/steadi/media/pdfs/steadi-form-riskfactorsck-508.pdf"], ["ACPM STEADI tool", "https://acpm.org/acpm-steadi-fall-risk-assessment-tool/"]]},
-
-    {"hub": "falls", "cat": "prog", "title": "Who is likely to fall",
-     "nums": [["Fell in past year", "OR 2.16"], ["Multiple falls", "OR 2.94"], ["Fear of falling", "OR 1.77"]],
-     "note": "Predictors of falls over 4 years. Simply asking about fear of falling works. About 1 in 3 community-dwelling adults 65+ fall each year; about half of nursing home residents.",
-     "tags": "risk factors prognosis fear of falling history incidence",
-     "src": [["STEADI risk score study, 2023", "https://pmc.ncbi.nlm.nih.gov/articles/PMC9940266"], ["MedlinePlus", "https://medlineplus.gov/lab-tests/fall-risk-assessment"]]},
-
-    {"hub": "knee", "cat": "dx", "title": "ACR clinical criteria, knee OA",
-     "nums": [["Rule", "Knee pain + 3 of 6"], ["Sensitivity", "95%"], ["Specificity", "69%"]],
-     "note": "Age > 50, morning stiffness < 30 min, crepitus, bony tenderness, bony enlargement, no palpable warmth. In a general population the criteria do worse (41% sensitive, 75% specific) and mostly catch later disease.",
-     "tags": "acr altman criteria classification diagnosis crepitus",
-     "src": [["Altman 1986 criteria table", "https://cdn.clinicaltrials.gov/large-docs/08/NCT05007808/Prot_000.pdf"], ["Peat 2006, Ann Rheum Dis", "https://doi.org/10.1136/ard.2006.051482"]]},
-
-    {"hub": "knee", "cat": "measures", "title": "OARSI performance tests",
-     "nums": [["Core set", "30s CST · 40 m walk · stairs"], ["Add if time", "TUG · 6MWT"]],
-     "note": "Recommended set for hip and knee OA. For 30s chair stand norms by age, see the Falls hub.",
-     "tags": "oarsi core set performance tests 40m fast paced walk stair climb",
-     "src": [["Dobson 2013 (via trial protocol)", "https://cdn.clinicaltrials.gov/large-docs/92/NCT04864392/Prot_000.pdf"]]},
-
-    {"hub": "knee", "cat": "measures", "title": "30-second chair stand change",
-     "nums": [["Important improvement", "2.0–2.6 reps"]],
-     "note": "Measured in hip OA; commonly applied to knee OA too.",
-     "tags": "30s cst chair stand mcid mcii change",
-     "src": [["Wright 2011, JOSPT", "https://scholars.duke.edu/publication/1114297"]]},
-
-    {"hub": "knee", "cat": "measures", "title": "6-minute walk (OA)",
-     "nums": [["MDC (90%)", "61 m"]],
-     "note": "Hip or knee OA before joint replacement. A change smaller than this may be measurement error.",
-     "tags": "6mwt six minute walk mdc arthroplasty",
-     "src": [["Kennedy 2005, BMC Musculoskelet Disord", "https://pmc.ncbi.nlm.nih.gov/articles/PMC549207"]]},
-
-    {"hub": "knee", "cat": "works", "title": "Exercise",
-     "nums": [["ACR 2019", "Strong for"]],
-     "note": "First-line for nearly everyone with knee OA. No single exercise type is superior; benefit lasts up to a year.",
-     "tags": "exercise strengthening aerobic acr arthritis foundation",
-     "src": [["Kolasinski 2019 ACR/AF guideline", "https://www.feinberg.northwestern.edu/sites/firstdailylife/docs/2019_acr_guideline_for_the_management_of_hand_hip_and_knee_oa.pdf"], ["AFP 2021 summary", "https://www.aafp.org/pubs/afp/issues/2021/0115/p120.html"]]},
-
-    {"hub": "knee", "cat": "works", "title": "Weight loss",
-     "nums": [["ACR 2019", "Strong for"], ["Meaningful loss", "≥ 5% body weight"]],
-     "note": "For patients who are overweight or obese. Even 5% gives a notable improvement in knee pain.",
-     "tags": "weight loss obesity bmi",
-     "src": [["AFP 2021 summary", "https://www.aafp.org/link_out?pmid=33448759"]]},
-
-    {"hub": "knee", "cat": "works", "title": "Tai chi, self-management, cane, brace",
-     "nums": [["Tai chi", "Strong for"], ["Self-management", "Strong for"], ["Cane", "Strong for"], ["Tibiofemoral brace", "Strong for"], ["Balance exercise", "Conditional for"]],
-     "note": "Tai chi benefit lasts at least 24 weeks.",
-     "tags": "tai chi self efficacy self management cane brace balance",
-     "src": [["Kolasinski 2019 ACR/AF guideline", "https://www.feinberg.northwestern.edu/sites/firstdailylife/docs/2019_acr_guideline_for_the_management_of_hand_hip_and_knee_oa.pdf"], ["AFP 2021 summary", "https://www.aafp.org/afp/2021/0115/p120"]]},
-
-    {"hub": "knee", "cat": "works", "title": "After TKA: what the APTA guideline backs",
-     "nums": [["NMES", "Recommended"], ["High-intensity strength", "From ~7 days post-op"], ["Balance / motor training", "Recommended"]],
-     "note": "NMES to improve quadriceps strength. A 2025 revision of this guideline is in progress.",
-     "tags": "tka total knee arthroplasty replacement nmes strength post-op",
-     "src": [["Jette 2020, APTA TKA CPG", "https://pmc.ncbi.nlm.nih.gov/articles/PMC7462050"], ["Physiotutors summary", "https://www.physiotutors.com/?p=7043"], ["2025 revision draft", "https://www.apta.org/siteassets/pdfs/cpg/apta-cpg-total-knee-arthroplasty-manuscript-draft.pdf"]]},
-
-    {"hub": "knee", "cat": "not", "title": "TENS",
-     "nums": [["ACR 2019", "Strong against"]],
-     "note": "Does not improve pain or function in knee OA.",
-     "tags": "tens electrical stimulation modality",
-     "src": [["AFP 2021 summary", "https://aafp.org/afp/2021/0115/p120.html"]]},
-
-    {"hub": "knee", "cat": "not", "title": "Arthroscopy for degenerative knees",
-     "nums": [["BMJ 2017", "Strong against"]],
-     "note": "Applies to nearly all patients with knee OA or degenerative meniscal tears; no better than exercise therapy.",
-     "tags": "arthroscopy surgery meniscus menisectomy debridement",
-     "src": [["Siemieniuk 2017, BMJ", "https://pmc.ncbi.nlm.nih.gov/articles/PMC5426368"]]},
-
-    {"hub": "knee", "cat": "not", "title": "Also recommended against",
-     "nums": [["Manual therapy added to exercise", "Conditional against"], ["Glucosamine / chondroitin", "Against"], ["PRP & stem cell injections", "Strong against"]],
-     "note": "ACR/Arthritis Foundation 2019.",
-     "tags": "manual therapy glucosamine chondroitin prp stem cell injection",
-     "src": [["EurekAlert ACR summary", "https://www.eurekalert.org/news-releases/654120"], ["Healio ACR 2019", "https://www.healio.com/news/rheumatology/20191115/acr-arthritis-foundation-guidelines-favor-nondrug-therapy-over-tens-stem-cells-for-oa"]]},
-
-    {"hub": "knee", "cat": "not", "title": "CPM after TKA",
-     "nums": [["APTA 2020", "Should not use"]],
-     "note": "Continuous passive motion devices are not recommended for primary TKA.",
-     "tags": "cpm continuous passive motion tka",
-     "src": [["Jette 2020, APTA TKA CPG", "https://guidelinecentral.com/TKA"]]},
-
-    {"hub": "knee", "cat": "flags", "title": "When it doesn't look like OA",
-     "nums": [],
-     "note": "OA criteria assume no palpable warmth and morning stiffness under 30 minutes. A warm joint or long morning stiffness points away from OA; consider an inflammatory cause and refer.",
-     "tags": "inflammatory warmth stiffness referral",
-     "src": [["Altman 1986 criteria table", "https://pmc.ncbi.nlm.nih.gov/articles/PMC5822967/table/tbl3"]]},
-
-    {"hub": "knee", "cat": "prog", "title": "Quadriceps weakness after TKA",
-     "nums": [],
-     "note": "Pain and self-reported function improve after TKA, but quadriceps weakness and functional limits often persist. That is why strengthening (and NMES) matters.",
-     "tags": "tka quadriceps weakness prognosis outcome",
-     "src": [["Meier 2008, JOSPT", "https://pubmed.ncbi.nlm.nih.gov/18448878/"]]},
-
-    {"hub": "back", "cat": "dx", "title": "Lumbar spinal stenosis: best findings",
-     "nums": [["No pain when seated", "LR+ 7.4"], ["Better bending forward", "LR+ 6.4"], ["Wide-based gait", "LR+ 13"], ["Abnormal Romberg", "LR+ 4.2"], ["Age > 70", "LR+ 2.0"]],
-     "note": "Older adults with leg pain. Wide-based gait has a very wide confidence interval (1.9–95). Combinations work best for ruling stenosis out.",
-     "tags": "lss spinal stenosis neurogenic claudication likelihood ratio romberg",
-     "src": [["Suri 2010, JAMA", "https://pmc.ncbi.nlm.nih.gov/articles/3260477/"]]},
-
-    {"hub": "back", "cat": "dx", "title": "Stenosis cluster (Cook 2011)",
-     "nums": [["4 of 5 present", "LR+ 4.6"], ["None present", "LR− 0.19"]],
-     "note": "Bilateral symptoms; leg pain more than back pain; pain walking/standing; relief sitting; age > 48. Four of five gives a 76% post-test probability.",
-     "tags": "stenosis cluster cook clinical prediction rule",
-     "src": [["Cook 2011, Physiother Res Int", "https://pubmed.ncbi.nlm.nih.gov/21077266/"]]},
-
-    {"hub": "back", "cat": "measures", "title": "Meaningful change in LBP",
-     "nums": [["Pain (NPRS 0–10)", "2 pts"], ["Oswestry (0–100)", "10 pts"], ["Roland-Morris (0–24)", "5 pts"], ["Or, for any of them", "30% from baseline"]],
-     "note": "International consensus values; treat as a starting point, not a fixed rule.",
-     "tags": "nprs oswestry odi roland morris rmdq mcid mic",
-     "src": [["Ostelo 2008, Spine", "https://research.vu.nl/en/publications/interpreting-change-scores-for-pain-and-functional-status-in-low-/"], ["McMaster record", "https://experts.mcmaster.ca/scholarly-works/1540945"]]},
-
-    {"hub": "back", "cat": "works", "title": "Older adults, chronic LBP",
-     "nums": [["JOSPT 2021", "Grade A: should use"]],
-     "note": "General exercise training to reduce pain and disability.",
-     "tags": "exercise older adults chronic low back pain cpg",
-     "src": [["George 2021, JOSPT CPG", "https://pmc.ncbi.nlm.nih.gov/articles/PMC10508241"]]},
-
-    {"hub": "back", "cat": "works", "title": "Acute LBP",
-     "nums": [["JOSPT 2021", "Grade C: can use"]],
-     "note": "Exercise training, including specific trunk muscle activation.",
-     "tags": "acute low back pain exercise trunk activation",
-     "src": [["George 2021, JOSPT CPG", "https://pmc.ncbi.nlm.nih.gov/articles/PMC10508241"]]},
-
-    {"hub": "back", "cat": "flags", "title": "Cancer: history matters most",
-     "nums": [["History of cancer", "33% post-test"]],
-     "note": "The single most useful red flag for spinal malignancy. Most other red flags barely change the probability on their own; don't rely on any one question.",
-     "tags": "red flag malignancy cancer metastasis screening",
-     "src": [["Downie 2013, BMJ", "https://researchers.mq.edu.au/en/publications/red-flags-to-screen-for-malignancy-and-fracture-in-patients-with--2/"], ["Cochrane red flags review", "https://pmc.ncbi.nlm.nih.gov/articles/PMC10631455"]]},
-
-    {"hub": "back", "cat": "flags", "title": "Spinal fracture",
-     "nums": [["Several flags together", "~90% probability"]],
-     "note": "Raise suspicion: older age, prolonged corticosteroid use, severe trauma, a contusion or abrasion.",
-     "tags": "fracture compression osteoporosis steroids trauma red flag",
-     "src": [["Downie 2013, BMJ", "https://heibib.ub.uni-heidelberg.de/search/Record/1725135124"], ["Downie 2013 full text", "https://repub.eur.nl/pub/72777/REPUB_72777_OA.pdf"]]},
-
-    {"hub": "back", "cat": "prog", "title": "Expected course",
-     "nums": [["Acute: pain at 6 wks", "52 → 23 / 100"], ["Acute: at 1 year", "6 / 100"], ["Persistent: at 6 wks", "51 → 33 / 100"], ["Persistent: at 1 year", "23 / 100"]],
-     "note": "Most improvement happens in the first six weeks, then slows. Useful for setting expectations with patients.",
-     "tags": "prognosis natural history recovery timeline",
-     "src": [["Menezes Costa 2012, CMAJ", "https://pmc.ncbi.nlm.nih.gov/articles/PMC3414626/"]]}
-  ]
+ "checked": "2026-11-21",
+ "hubs": [
+  {
+   "id": "falls",
+   "name": "Falls & balance",
+   "blurb": "Older adults, community-dwelling"
+  },
+  {
+   "id": "knee",
+   "name": "Knee OA & TKA",
+   "blurb": "Knee osteoarthritis and total knee replacement"
+  },
+  {
+   "id": "back",
+   "name": "Low back pain",
+   "blurb": "Including spinal stenosis in older adults"
+  }
+ ],
+ "cats": [
+  {
+   "id": "works",
+   "name": "What works, and how much"
+  },
+  {
+   "id": "not",
+   "name": "What doesn't work"
+  },
+  {
+   "id": "dx",
+   "name": "Diagnosis & special tests"
+  },
+  {
+   "id": "measures",
+   "name": "Measures, cutoffs & change scores"
+  },
+  {
+   "id": "flags",
+   "name": "Red flags & when to refer"
+  },
+  {
+   "id": "prog",
+   "name": "Prognosis & risk"
+  }
+ ],
+ "changes": [
+  {
+   "date": "2026-11-21",
+   "hub": "falls",
+   "card": "falls-exercise",
+   "text": "Exercise to prevent falls now leads with dose: 3+ hours a week of challenging balance work for 12+ weeks."
+  },
+  {
+   "date": "2026-11-21",
+   "hub": "back",
+   "card": "back-course",
+   "text": "Back pain prognosis adds the 2024 CMAJ update, which is less optimistic than the 2012 review."
+  },
+  {
+   "date": "2026-11-21",
+   "hub": null,
+   "card": null,
+   "text": "Every card now holds its studies, each with its design, size and rating. Tap \"studies\" on any card."
+  }
+ ],
+ "cards": [
+  {
+   "id": "falls-exercise",
+   "hub": "falls",
+   "cat": "works",
+   "updated": "2026-11-21",
+   "title": "Exercise to prevent falls",
+   "takeaway": "Dose decides the result: 3+ hours a week of challenging balance work, kept up for 12+ weeks.",
+   "nums": [
+    [
+     "Falls, 3+ h/week with balance",
+     "−42%"
+    ],
+    [
+     "Falls, any exercise",
+     "−23%"
+    ],
+    [
+     "Minimum program",
+     "3×/week, 12+ wks"
+    ],
+    [
+     "Benefit fades after stopping",
+     "3–6 months"
+    ]
+   ],
+   "note": "Larger effects when a health professional, usually a PT, delivers it. For your plan of care: progress balance until it is truly challenging, and build a home program that gets the weekly total past 3 hours.",
+   "badge": {
+    "label": "GRADE: High",
+    "by": "Cochrane 2019",
+    "tone": "high"
+   },
+   "tags": "fall prevention exercise dose otago tai chi balance training hours per week detraining",
+   "studies": [
+    {
+     "cite": "Sherrington 2019, Cochrane",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30703272/",
+     "year": 2019,
+     "design": "Systematic review",
+     "n": "108 trials, 23,407 people",
+     "finding": "Any exercise: falls −23% (59 trials, 12,981 people). People who fall: −15%.",
+     "rating": "GRADE high"
+    },
+    {
+     "cite": "Sherrington 2020, IJBNPA (WHO update)",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7689963",
+     "year": 2020,
+     "design": "Systematic review",
+     "n": "116 trials, 25,160 people",
+     "finding": "3+ h/week including balance: falls −42%. Balance + functional: −24% (high). Mixed programs: −28%. Tai chi: −23% (moderate).",
+     "rating": "GRADE high to moderate"
+    },
+    {
+     "cite": "Sherrington 2017, BJSM",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/27707740/",
+     "year": 2017,
+     "design": "Meta-analysis",
+     "n": "69 comparisons",
+     "finding": "Challenging balance plus more than 3 h/week: falls −39%. Overall −21%.",
+     "rating": "Not graded"
+    },
+    {
+     "cite": "Thomas 2010, Age and Ageing (Otago)",
+     "url": "https://researchnow.flinders.edu.au/en/publications/does-the-otago-exercise-programme-reduce-mortality-and-falls-in-o/",
+     "year": 2010,
+     "design": "Meta-analysis",
+     "n": "7 trials, 1,503 people, mean age 81.6",
+     "finding": "Otago home program: falls −32%, deaths over 12 months −55%.",
+     "rating": "Not graded"
+    },
+    {
+     "cite": "World Falls Guidelines 2022",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9523684/table/TB5",
+     "year": 2022,
+     "design": "Guideline",
+     "n": "96 experts, global",
+     "finding": "Balance-challenging and functional exercise, 3+ sessions a week, individualized, progressed for at least 12 weeks.",
+     "rating": "Grade 1A (strong, high quality)"
+    },
+    {
+     "cite": "MJA 2024 guideline summary",
+     "url": "https://mja.com.au/node/20169",
+     "year": 2024,
+     "design": "Guideline summary",
+     "n": "",
+     "finding": "Gains are lost over 3–6 months once exercise stops, so most older adults need an ongoing program.",
+     "rating": "Not graded"
+    }
+   ]
+  },
+  {
+   "id": "falls-not",
+   "hub": "falls",
+   "cat": "not",
+   "title": "Exercise that doesn't prevent falls",
+   "takeaway": "Walking-only, resistance-only and dance programs have not been shown to prevent falls.",
+   "nums": [
+    [
+     "Walking-only programs",
+     "Not shown"
+    ],
+    [
+     "Resistance-only programs",
+     "Uncertain"
+    ],
+    [
+     "Care homes, recent discharge",
+     "No effect shown"
+    ]
+   ],
+   "note": "Strength work helps when it is added to balance training, not instead of it. Walking is still good for health; just don't count it as the falls program.",
+   "badge": {
+    "label": "Evidence insufficient",
+    "by": "Cochrane 2019",
+    "tone": "low"
+   },
+   "tags": "walking program resistance only dance flexibility ineffective residential care nursing home",
+   "studies": [
+    {
+     "cite": "Sherrington 2019, Cochrane",
+     "url": "https://www.cochrane.org/CD012424/BACK_exercise-preventing-falls-older-people-living-community",
+     "year": 2019,
+     "design": "Systematic review",
+     "n": "108 trials",
+     "finding": "Not enough evidence for programs mainly of resistance, dance or walking; none for flexibility or endurance alone.",
+     "rating": "GRADE low to very low"
+    },
+    {
+     "cite": "Sherrington 2017, BJSM",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/27707740/",
+     "year": 2017,
+     "design": "Meta-analysis",
+     "n": "69 comparisons",
+     "finding": "No falls-prevention effect found in residential care, stroke survivors, or people recently discharged from hospital.",
+     "rating": "Not graded"
+    },
+    {
+     "cite": "Skelton review, JFSF 2018",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7155323/table/T1",
+     "year": 2018,
+     "design": "Narrative review",
+     "n": "",
+     "finding": "Avoid brisk walking or walking-only programs for people at risk of falls.",
+     "rating": "Not graded"
+    }
+   ]
+  },
+  {
+   "id": "falls-tug",
+   "hub": "falls",
+   "cat": "measures",
+   "title": "Timed Up and Go (TUG)",
+   "takeaway": "12 seconds or more flags fall risk. Watch how they move, not just the time.",
+   "nums": [
+    [
+     "Fall-risk cutoff",
+     "≥ 12 s"
+    ]
+   ],
+   "note": "Shuffling, en bloc turning or steadying on walls may signal a neurological problem worth further evaluation.",
+   "differ": "Published cutoffs range from 12 to 16 seconds.",
+   "badge": {
+    "label": "Screening tool",
+    "by": "CDC STEADI",
+    "tone": "neutral"
+   },
+   "tags": "tug mobility gait steadi screen",
+   "studies": [
+    {
+     "cite": "CDC STEADI: TUG",
+     "url": "https://www.cdc.gov/steadi/pdf/steadi-assessment-tug-508.pdf",
+     "year": 2017,
+     "design": "Screening tool",
+     "n": "",
+     "finding": "Older adult taking 12 s or more is at risk of falling.",
+     "rating": "Not graded"
+    },
+    {
+     "cite": "STEADI risk score study, BMJ Open 2023",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9940266",
+     "year": 2023,
+     "design": "Cohort",
+     "n": "",
+     "finding": "Notes TUG cutoffs in the literature from 12 s to 16 s.",
+     "rating": "Not graded"
+    }
+   ]
+  },
+  {
+   "id": "falls-30cst",
+   "hub": "falls",
+   "cat": "measures",
+   "title": "30-second chair stand",
+   "takeaway": "Fewer stands than the number for their age and sex means fall risk.",
+   "table": {
+    "head": [
+     "Age",
+     "Men below",
+     "Women below"
+    ],
+    "rows": [
+     [
+      "60–64",
+      "14",
+      "12"
+     ],
+     [
+      "65–69",
+      "12",
+      "11"
+     ],
+     [
+      "70–74",
+      "12",
+      "10"
+     ],
+     [
+      "75–79",
+      "11",
+      "10"
+     ],
+     [
+      "80–84",
+      "10",
+      "9"
+     ],
+     [
+      "85–89",
+      "8",
+      "8"
+     ],
+     [
+      "90–94",
+      "7",
+      "4"
+     ]
+    ]
+   },
+   "note": "Arms crossed, 17-inch seat. If they must use their arms, the score is 0.",
+   "badge": {
+    "label": "Screening tool",
+    "by": "CDC STEADI",
+    "tone": "neutral"
+   },
+   "tags": "30s cst sit to stand chair rise strength norms steadi",
+   "studies": [
+    {
+     "cite": "CDC STEADI: 30-second chair stand",
+     "url": "https://www.nj.gov/humanservices/doas/forms/STEADI-Assessment-30Sec-508.pdf",
+     "year": 2017,
+     "design": "Screening tool",
+     "n": "",
+     "finding": "Below-average score by age and sex indicates fall risk.",
+     "rating": "Not graded"
+    },
+    {
+     "cite": "Jones 1999, Res Q Exerc Sport",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/10380242/",
+     "year": 1999,
+     "design": "Measurement study",
+     "n": "",
+     "finding": "Original 30-s chair stand test in community-dwelling older adults.",
+     "rating": "Not graded"
+    }
+   ]
+  },
+  {
+   "id": "falls-4stage",
+   "hub": "falls",
+   "cat": "measures",
+   "title": "4-Stage Balance Test",
+   "takeaway": "Can't hold tandem stance for 10 seconds = increased fall risk.",
+   "nums": [
+    [
+     "Fall-risk cutoff",
+     "Tandem < 10 s"
+    ]
+   ],
+   "note": "Feet together, semi-tandem, tandem, single leg: 10 s each, no assistive device, eyes open.",
+   "badge": {
+    "label": "Screening tool",
+    "by": "CDC STEADI",
+    "tone": "neutral"
+   },
+   "tags": "4 stage four stage tandem stance static balance steadi",
+   "studies": [
+    {
+     "cite": "CDC STEADI: 4-Stage Balance",
+     "url": "https://www.cdc.gov/steadi/media/pdfs/STEADI-Assessment-4Stage-508.pdf",
+     "year": 2017,
+     "design": "Screening tool",
+     "n": "",
+     "finding": "Unable to hold tandem stand for at least 10 s: increased risk of falling.",
+     "rating": "Not graded"
+    }
+   ]
+  },
+  {
+   "id": "falls-berg",
+   "hub": "falls",
+   "cat": "measures",
+   "title": "Berg Balance Scale",
+   "takeaway": "Don't use 45 alone: pair the score with fall history.",
+   "nums": [
+    [
+     "Fall history + Berg",
+     "< 51"
+    ],
+    [
+     "No fall history + Berg",
+     "< 42"
+    ],
+    [
+     "That rule: sens / spec",
+     "91% / 82%"
+    ],
+    [
+     "Classic cutoff 45: sensitivity",
+     "64%"
+    ],
+    [
+     "MDC (baseline 0–24)",
+     "4.6 pts"
+    ]
+   ],
+   "note": "The classic 45 cutoff misses about a third of fallers. MDC depends on the starting score; see Donoghue for other ranges.",
+   "differ": "Cutoffs vary: 45 (Berg 1992), 51/42 with fall history (Shumway-Cook 1997).",
+   "badge": {
+    "label": "Not formally graded",
+    "by": "measurement studies",
+    "tone": "neutral"
+   },
+   "tags": "bbs berg static dynamic balance",
+   "studies": [
+    {
+     "cite": "Shumway-Cook 1997, Phys Ther",
+     "url": "https://www.sralab.org/rehabilitation-measures/berg-balance-scale?ID=888",
+     "year": 1997,
+     "design": "Cohort",
+     "n": "44 older adults",
+     "finding": "Fall history and Berg < 51, or no history and Berg < 42: 91% sensitive, 82% specific.",
+     "rating": "Not graded"
+    },
+    {
+     "cite": "Donoghue 2009, J Rehabil Med",
+     "url": "https://medicaljournals.se/jrm/content/html/10.2340/16501977-0337",
+     "year": 2009,
+     "design": "Test-retest",
+     "n": "118 adults over 65",
+     "finding": "MDC 4.6 points when baseline is 0–24.",
+     "rating": "Not graded"
+    },
+    {
+     "cite": "Riddle & Stratford 1999",
+     "url": "https://cdn.clinicaltrials.gov/large-docs/00/NCT03750500/Prot_SAP_ICF_000.pdf",
+     "year": 1999,
+     "design": "Diagnostic accuracy",
+     "n": "",
+     "finding": "Cutoff 45: sensitivity 64%.",
+     "rating": "Not graded"
+    },
+    {
+     "cite": "Berg 1992, Can J Public Health",
+     "url": "https://www.sralab.org/rehabilitation-measures/berg-balance-scale",
+     "year": 1992,
+     "design": "Validation",
+     "n": "",
+     "finding": "Score below 45: greater risk of falling.",
+     "rating": "Not graded"
+    }
+   ]
+  },
+  {
+   "id": "falls-gait",
+   "hub": "falls",
+   "cat": "measures",
+   "title": "Gait speed",
+   "takeaway": "Under 1.0 m/s flags fall risk; 0.10 m/s is a substantial change.",
+   "nums": [
+    [
+     "Common fall-risk threshold",
+     "< 1.0 m/s"
+    ],
+    [
+     "Poor outcomes",
+     "< 0.8 m/s"
+    ],
+    [
+     "Small meaningful change",
+     "0.05 m/s"
+    ],
+    [
+     "Substantial change",
+     "0.10 m/s"
+    ]
+   ],
+   "note": "Often called the sixth vital sign.",
+   "differ": "After hip fracture, small meaningful change runs higher: 0.10–0.17 m/s.",
+   "badge": {
+    "label": "Not formally graded",
+    "by": "measurement studies",
+    "tone": "neutral"
+   },
+   "tags": "gait speed walking speed 10mwt 4m walk sixth vital sign",
+   "studies": [
+    {
+     "cite": "Perera 2006, JAGS",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/16696738/",
+     "year": 2006,
+     "design": "Cohort",
+     "n": "",
+     "finding": "Small meaningful change about 0.05 m/s; substantial about 0.10 m/s.",
+     "rating": "Not graded"
+    },
+    {
+     "cite": "Hip fracture recovery study, PMC",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3230716",
+     "year": 2011,
+     "design": "Cohort",
+     "n": "Women after hip fracture",
+     "finding": "Small meaningful improvement 0.10–0.17 m/s.",
+     "rating": "Not graded"
+    },
+    {
+     "cite": "Gait speed and fall risk, 2023",
+     "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10214622/",
+     "year": 2023,
+     "design": "Retrospective cohort",
+     "n": "",
+     "finding": "1.0 m/s is the commonly applied fall-risk threshold.",
+     "rating": "Not graded"
+    },
+    {
+     "cite": "Shirley Ryan AbilityLab: Gait speed",
+     "url": "https://www.sralab.org/rehabilitation-measures/gait-speed",
+     "year": null,
+     "design": "Summary of studies",
+     "n": "",
+     "finding": "0.8 m/s predicts poor clinical outcomes; 0.6 m/s further decline.",
+     "rating": "Not graded"
+    }
+   ]
+  },
+  {
+   "id": "falls-6mwt",
+   "hub": "falls",
+   "cat": "measures",
+   "title": "6MWT & SPPB change",
+   "takeaway": "Small change: 20 m or 0.5 pt. Substantial: 50 m or 1.0 pt.",
+   "nums": [
+    [
+     "6MWT small / substantial",
+     "20 / 50 m"
+    ],
+    [
+     "SPPB small / substantial",
+     "0.5 / 1.0 pt"
+    ]
+   ],
+   "badge": {
+    "label": "Not formally graded",
+    "by": "cohort",
+    "tone": "neutral"
+   },
+   "tags": "6mwt six minute walk sppb short physical performance battery endurance",
+   "studies": [
+    {
+     "cite": "Perera 2006, JAGS",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/16696738/",
+     "year": 2006,
+     "design": "Cohort",
+     "n": "",
+     "finding": "Best initial estimates of meaningful change in older adults.",
+     "rating": "Not graded"
+    }
+   ]
+  },
+  {
+   "id": "falls-orthostatic",
+   "hub": "falls",
+   "cat": "flags",
+   "title": "Orthostatic hypotension",
+   "takeaway": "Check it: it raises fall risk about 73%. Flag a positive test to the physician.",
+   "nums": [
+    [
+     "Positive",
+     "SBP ↓ ≥ 20 or DBP ↓ ≥ 10"
+    ],
+    [
+     "Or",
+     "Dizziness on standing"
+    ]
+   ],
+   "note": "Lying 5 min, then measure at 1 and 3 min standing.",
+   "badge": {
+    "label": "Screening tool",
+    "by": "CDC STEADI",
+    "tone": "neutral"
+   },
+   "tags": "orthostatic postural hypotension blood pressure dizziness",
+   "studies": [
+    {
+     "cite": "ACPM STEADI tool",
+     "url": "https://acpm.org/acpm-steadi-fall-risk-assessment-tool/",
+     "year": null,
+     "design": "Clinical tool",
+     "n": "",
+     "finding": "Orthostatic hypotension increases fall risk 73%; protocol and cutoffs.",
+     "rating": "Not graded"
+    },
+    {
+     "cite": "CDC STEADI risk factor checklist",
+     "url": "https://www.cdc.gov/steadi/media/pdfs/steadi-form-riskfactorsck-508.pdf",
+     "year": 2017,
+     "design": "Screening tool",
+     "n": "",
+     "finding": "Systolic drop ≥ 20, diastolic drop ≥ 10, or lightheadedness from lying to standing.",
+     "rating": "Not graded"
+    }
+   ]
+  },
+  {
+   "id": "falls-meds",
+   "hub": "falls",
+   "cat": "flags",
+   "title": "Medications & vision",
+   "takeaway": "Flag sedating, psychoactive, opioid and blood-pressure-lowering drugs for review.",
+   "nums": [
+    [
+     "Fall injuries cut by deprescribing",
+     "About 35%"
+    ],
+    [
+     "Vision flag",
+     "< 20/40 or no exam in 1 yr"
+    ]
+   ],
+   "badge": {
+    "label": "Screening tool",
+    "by": "CDC STEADI",
+    "tone": "neutral"
+   },
+   "tags": "medications polypharmacy frid deprescribing vision eye",
+   "studies": [
+    {
+     "cite": "CDC STEADI risk factor checklist",
+     "url": "https://www.cdc.gov/steadi/media/pdfs/steadi-form-riskfactorsck-508.pdf",
+     "year": 2017,
+     "design": "Screening tool",
+     "n": "",
+     "finding": "Medication classes and vision criteria to screen.",
+     "rating": "Not graded"
+    },
+    {
+     "cite": "ACPM STEADI tool",
+     "url": "https://acpm.org/acpm-steadi-fall-risk-assessment-tool/",
+     "year": null,
+     "design": "Clinical tool",
+     "n": "",
+     "finding": "Deprescribing high-risk drugs can reduce fall-related injuries by 35%.",
+     "rating": "Not graded"
+    },
+    {
+     "cite": "World Falls Guidelines 2022",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9523684/table/TB5",
+     "year": 2022,
+     "design": "Guideline",
+     "n": "",
+     "finding": "In long-term care, always include rational deprescribing of fall-risk-increasing drugs.",
+     "rating": "Grade 1C"
+    }
+   ]
+  },
+  {
+   "id": "falls-risk",
+   "hub": "falls",
+   "cat": "prog",
+   "title": "Who is likely to fall",
+   "takeaway": "Just ask: a past fall and fear of falling both predict the next one.",
+   "nums": [
+    [
+     "Fell in past year",
+     "OR 2.16"
+    ],
+    [
+     "Multiple falls",
+     "OR 2.94"
+    ],
+    [
+     "Fear of falling",
+     "OR 1.77"
+    ],
+    [
+     "Community 65+ who fall yearly",
+     "About 1 in 3"
+    ]
+   ],
+   "note": "Predictors of falls over 4 years.",
+   "badge": {
+    "label": "Not formally graded",
+    "by": "cohort",
+    "tone": "neutral"
+   },
+   "tags": "risk factors prognosis fear of falling history incidence",
+   "studies": [
+    {
+     "cite": "STEADI risk score study, BMJ Open 2023",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9940266",
+     "year": 2023,
+     "design": "Cohort",
+     "n": "",
+     "finding": "Past-year fall OR 2.16, multiple falls OR 2.94, fear of falling OR 1.77 for falls over 4 years.",
+     "rating": "Not graded"
+    },
+    {
+     "cite": "MedlinePlus",
+     "url": "https://medlineplus.gov/lab-tests/fall-risk-assessment",
+     "year": null,
+     "design": "Public summary",
+     "n": "",
+     "finding": "About a third of older adults at home and about half in nursing homes fall at least once a year.",
+     "rating": "Not graded"
+    }
+   ]
+  },
+  {
+   "id": "knee-first-line",
+   "hub": "knee",
+   "cat": "works",
+   "title": "First-line care for knee OA",
+   "takeaway": "Exercise, weight loss and self-management first. No single exercise type beats another.",
+   "nums": [
+    [
+     "Exercise",
+     "Strong for"
+    ],
+    [
+     "Weight loss, if overweight",
+     "Strong for"
+    ],
+    [
+     "Meaningful weight loss",
+     "≥ 5%"
+    ],
+    [
+     "Tai chi",
+     "Strong for"
+    ],
+    [
+     "Cane, tibiofemoral brace",
+     "Strong for"
+    ],
+    [
+     "Balance exercise",
+     "Conditional for"
+    ]
+   ],
+   "note": "Exercise benefit lasts up to a year; tai chi at least 24 weeks.",
+   "badge": {
+    "label": "Strong recommendation",
+    "by": "ACR/AF 2019",
+    "tone": "high"
+   },
+   "tags": "exercise strengthening aerobic weight loss tai chi self management cane brace acr arthritis foundation",
+   "studies": [
+    {
+     "cite": "Kolasinski 2019, ACR/Arthritis Foundation guideline",
+     "url": "https://www.feinberg.northwestern.edu/sites/firstdailylife/docs/2019_acr_guideline_for_the_management_of_hand_hip_and_knee_oa.pdf",
+     "year": 2019,
+     "design": "Guideline",
+     "n": "",
+     "finding": "Strong for exercise, weight loss, self-management, tai chi, cane; conditional for balance exercise.",
+     "rating": "GRADE-based guideline"
+    },
+    {
+     "cite": "AFP 2021 summary",
+     "url": "https://www.aafp.org/pubs/afp/issues/2021/0115/p120.html",
+     "year": 2021,
+     "design": "Guideline summary",
+     "n": "",
+     "finding": "Even 5% weight loss notably improves knee pain. No exercise type superior.",
+     "rating": "Not graded"
+    }
+   ]
+  },
+  {
+   "id": "knee-tka",
+   "hub": "knee",
+   "cat": "works",
+   "title": "Rehab after total knee replacement",
+   "takeaway": "Load the quads early and hard: high-intensity strengthening from about a week post-op, plus NMES.",
+   "nums": [
+    [
+     "High-intensity strength",
+     "From ~7 days"
+    ],
+    [
+     "NMES for quad strength",
+     "Recommended"
+    ],
+    [
+     "Balance / motor training",
+     "Recommended"
+    ],
+    [
+     "CPM",
+     "Should not use"
+    ]
+   ],
+   "note": "Quadriceps weakness often persists after TKA even when pain improves, which is why strengthening matters. A 2025 revision of this guideline is in progress.",
+   "badge": {
+    "label": "Clinical practice guideline",
+    "by": "APTA 2020",
+    "tone": "high"
+   },
+   "tags": "tka total knee arthroplasty replacement nmes strength post-op cpm continuous passive motion",
+   "studies": [
+    {
+     "cite": "Jette 2020, APTA TKA guideline",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7462050",
+     "year": 2020,
+     "design": "Guideline",
+     "n": "192 studies reviewed",
+     "finding": "NMES, early high-intensity strength training, motor/balance training; against CPM.",
+     "rating": "Graded guideline"
+    },
+    {
+     "cite": "Meier 2008, JOSPT",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/18448878/",
+     "year": 2008,
+     "design": "Clinical review",
+     "n": "",
+     "finding": "Quadriceps weakness and functional limits persist after TKA.",
+     "rating": "Not graded"
+    },
+    {
+     "cite": "APTA TKA guideline: 2025 revision draft",
+     "url": "https://www.apta.org/siteassets/pdfs/cpg/apta-cpg-total-knee-arthroplasty-manuscript-draft.pdf",
+     "year": 2025,
+     "design": "Draft guideline",
+     "n": "",
+     "finding": "Revision in progress; check for changes before relying on the 2020 grades.",
+     "rating": "Draft"
+    }
+   ]
+  },
+  {
+   "id": "knee-not",
+   "hub": "knee",
+   "cat": "not",
+   "title": "What doesn't help knee OA",
+   "takeaway": "Skip TENS. Arthroscopy is no better than exercise for degenerative knees.",
+   "nums": [
+    [
+     "TENS",
+     "Strong against"
+    ],
+    [
+     "Arthroscopy, degenerative knee",
+     "Strong against"
+    ],
+    [
+     "PRP, stem cell injections",
+     "Strong against"
+    ],
+    [
+     "Glucosamine / chondroitin",
+     "Against"
+    ],
+    [
+     "Manual therapy added to exercise",
+     "Conditional against"
+    ]
+   ],
+   "badge": {
+    "label": "Recommended against",
+    "by": "ACR/AF 2019, BMJ 2017",
+    "tone": "low"
+   },
+   "tags": "tens arthroscopy surgery meniscus manual therapy glucosamine chondroitin prp stem cell injection",
+   "studies": [
+    {
+     "cite": "Kolasinski 2019, ACR/Arthritis Foundation guideline",
+     "url": "https://www.healio.com/news/rheumatology/20191115/acr-arthritis-foundation-guidelines-favor-nondrug-therapy-over-tens-stem-cells-for-oa",
+     "year": 2019,
+     "design": "Guideline",
+     "n": "",
+     "finding": "Strongly against TENS, chondroitin, PRP and stem cell injections; conditionally against manual therapy with exercise.",
+     "rating": "GRADE-based guideline"
+    },
+    {
+     "cite": "Siemieniuk 2017, BMJ Rapid Recommendation",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5426368",
+     "year": 2017,
+     "design": "Guideline",
+     "n": "",
+     "finding": "Strong recommendation against arthroscopy for nearly all degenerative knee disease.",
+     "rating": "GRADE strong"
+    }
+   ]
+  },
+  {
+   "id": "knee-acr",
+   "hub": "knee",
+   "cat": "dx",
+   "title": "ACR clinical criteria, knee OA",
+   "takeaway": "Knee pain plus 3 of 6 findings. Works best in clear, later-stage cases.",
+   "nums": [
+    [
+     "Rule",
+     "Pain + 3 of 6"
+    ],
+    [
+     "Sensitivity",
+     "95%"
+    ],
+    [
+     "Specificity",
+     "69%"
+    ]
+   ],
+   "note": "Age > 50, morning stiffness < 30 min, crepitus, bony tenderness, bony enlargement, no palpable warmth.",
+   "differ": "In a general population sample: only 41% sensitive and 75% specific.",
+   "badge": {
+    "label": "Not formally graded",
+    "by": "diagnostic studies",
+    "tone": "neutral"
+   },
+   "tags": "acr altman criteria classification diagnosis crepitus",
+   "studies": [
+    {
+     "cite": "Altman 1986, Arthritis Rheum",
+     "url": "https://cdn.clinicaltrials.gov/large-docs/08/NCT05007808/Prot_000.pdf",
+     "year": 1986,
+     "design": "Classification criteria",
+     "n": "",
+     "finding": "Clinical criteria: 95% sensitive, 69% specific.",
+     "rating": "Not graded"
+    },
+    {
+     "cite": "Peat 2006, Ann Rheum Dis",
+     "url": "https://doi.org/10.1136/ard.2006.051482",
+     "year": 2006,
+     "design": "Cross-sectional",
+     "n": "819 adults 50+",
+     "finding": "41% sensitive, 75% specific; criteria mostly reflect later disease.",
+     "rating": "Not graded"
+    }
+   ]
+  },
+  {
+   "id": "knee-oarsi",
+   "hub": "knee",
+   "cat": "measures",
+   "title": "OARSI performance tests",
+   "takeaway": "Core set: 30-second chair stand, 40 m fast walk, stair climb.",
+   "nums": [
+    [
+     "Core set",
+     "30s CST · 40 m · stairs"
+    ],
+    [
+     "Add if time",
+     "TUG · 6MWT"
+    ]
+   ],
+   "note": "For 30-second chair stand norms by age, see the Falls hub.",
+   "badge": {
+    "label": "Expert recommendation",
+    "by": "OARSI 2013",
+    "tone": "neutral"
+   },
+   "tags": "oarsi core set performance tests 40m fast paced walk stair climb",
+   "studies": [
+    {
+     "cite": "Dobson 2013, Osteoarthritis Cartilage",
+     "url": "https://cdn.clinicaltrials.gov/large-docs/92/NCT04864392/Prot_000.pdf",
+     "year": 2013,
+     "design": "Recommendation",
+     "n": "",
+     "finding": "Core set and recommended set of performance tests for hip and knee OA.",
+     "rating": "Not graded"
+    }
+   ]
+  },
+  {
+   "id": "knee-change",
+   "hub": "knee",
+   "cat": "measures",
+   "title": "Meaningful change: chair stand & 6MWT",
+   "takeaway": "2–3 more chair stands is an important gain. A 6MWT change under 61 m may be noise.",
+   "nums": [
+    [
+     "30s CST important gain",
+     "2.0–2.6 reps"
+    ],
+    [
+     "6MWT MDC (90%)",
+     "61 m"
+    ]
+   ],
+   "differ": "The chair stand value comes from hip OA, not knee OA.",
+   "badge": {
+    "label": "Not formally graded",
+    "by": "cohort studies",
+    "tone": "neutral"
+   },
+   "tags": "30s cst chair stand mcid mcii 6mwt six minute walk mdc change",
+   "studies": [
+    {
+     "cite": "Wright 2011, JOSPT",
+     "url": "https://scholars.duke.edu/publication/1114297",
+     "year": 2011,
+     "design": "Cohort",
+     "n": "Hip OA patients",
+     "finding": "Major clinically important improvement: 2.0–2.6 repetitions.",
+     "rating": "Not graded"
+    },
+    {
+     "cite": "Kennedy 2005, BMC Musculoskelet Disord",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC549207",
+     "year": 2005,
+     "design": "Cohort",
+     "n": "Hip/knee OA before arthroplasty",
+     "finding": "6MWT minimal detectable change (90%) 61.34 m.",
+     "rating": "Not graded"
+    }
+   ]
+  },
+  {
+   "id": "knee-flags",
+   "hub": "knee",
+   "cat": "flags",
+   "title": "When it doesn't look like OA",
+   "takeaway": "A warm joint or morning stiffness over 30 minutes points away from OA. Consider referral.",
+   "nums": [],
+   "badge": {
+    "label": "Not formally graded",
+    "by": "classification criteria",
+    "tone": "neutral"
+   },
+   "tags": "inflammatory warmth stiffness referral",
+   "studies": [
+    {
+     "cite": "Altman 1986 criteria",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5822967/table/tbl3",
+     "year": 1986,
+     "design": "Classification criteria",
+     "n": "",
+     "finding": "OA criteria include no palpable warmth and stiffness under 30 minutes.",
+     "rating": "Not graded"
+    }
+   ]
+  },
+  {
+   "id": "back-exercise",
+   "hub": "back",
+   "cat": "works",
+   "title": "Exercise for low back pain",
+   "takeaway": "Older adults with chronic LBP: general exercise training is a grade A \"should.\"",
+   "nums": [
+    [
+     "Older adults, chronic LBP",
+     "Grade A: should"
+    ],
+    [
+     "Acute LBP, incl. trunk activation",
+     "Grade C: can"
+    ]
+   ],
+   "badge": {
+    "label": "Clinical practice guideline",
+    "by": "JOSPT 2021",
+    "tone": "high"
+   },
+   "tags": "exercise older adults chronic acute low back pain cpg trunk activation",
+   "studies": [
+    {
+     "cite": "George 2021, JOSPT CPG",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10508241",
+     "year": 2021,
+     "design": "Guideline",
+     "n": "",
+     "finding": "Should use general exercise for older adults with chronic LBP (A); can use exercise incl. trunk activation for acute LBP (C).",
+     "rating": "Graded guideline"
+    }
+   ]
+  },
+  {
+   "id": "back-lss",
+   "hub": "back",
+   "cat": "dx",
+   "title": "Lumbar spinal stenosis",
+   "takeaway": "Best single clues: no pain when seated, and relief bending forward.",
+   "nums": [
+    [
+     "No pain when seated",
+     "LR+ 7.4"
+    ],
+    [
+     "Better bending forward",
+     "LR+ 6.4"
+    ],
+    [
+     "Cluster: 4 of 5 present",
+     "LR+ 4.6"
+    ],
+    [
+     "Cluster: none present",
+     "LR− 0.19"
+    ],
+    [
+     "Abnormal Romberg",
+     "LR+ 4.2"
+    ]
+   ],
+   "note": "Cluster: bilateral symptoms, leg pain more than back pain, pain walking/standing, relief sitting, age > 48. Wide-based gait has LR+ 13 but a very wide confidence interval (1.9–95).",
+   "badge": {
+    "label": "Not formally graded",
+    "by": "diagnostic studies",
+    "tone": "neutral"
+   },
+   "tags": "lss spinal stenosis neurogenic claudication likelihood ratio romberg cluster cook",
+   "studies": [
+    {
+     "cite": "Suri 2010, JAMA Rational Clinical Exam",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/3260477/",
+     "year": 2010,
+     "design": "Systematic review",
+     "n": "",
+     "finding": "No pain seated LR 7.4; improvement bending forward LR 6.4; Romberg 4.2; age > 70 LR 2.0.",
+     "rating": "Not graded"
+    },
+    {
+     "cite": "Cook 2011, Physiother Res Int",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/21077266/",
+     "year": 2011,
+     "design": "Case-control",
+     "n": "1,448 patients",
+     "finding": "4 of 5 findings: LR+ 4.6, post-test probability 76%. None: LR− 0.19.",
+     "rating": "Not graded"
+    }
+   ]
+  },
+  {
+   "id": "back-change",
+   "hub": "back",
+   "cat": "measures",
+   "title": "Meaningful change in LBP",
+   "takeaway": "2 points on pain, 10 on Oswestry, 5 on Roland-Morris, or 30% from baseline.",
+   "nums": [
+    [
+     "Pain (NPRS 0–10)",
+     "2 pts"
+    ],
+    [
+     "Oswestry (0–100)",
+     "10 pts"
+    ],
+    [
+     "Roland-Morris (0–24)",
+     "5 pts"
+    ],
+    [
+     "Any of them",
+     "30% from baseline"
+    ]
+   ],
+   "note": "International consensus values; treat as a starting point, not a fixed rule.",
+   "badge": {
+    "label": "Expert consensus",
+    "by": "Ostelo 2008",
+    "tone": "neutral"
+   },
+   "tags": "nprs oswestry odi roland morris rmdq mcid mic",
+   "studies": [
+    {
+     "cite": "Ostelo 2008, Spine",
+     "url": "https://research.vu.nl/en/publications/interpreting-change-scores-for-pain-and-functional-status-in-low-/",
+     "year": 2008,
+     "design": "Consensus",
+     "n": "",
+     "finding": "NRS 2, ODI 10, Roland-Morris 5; 30% change meaningful for individual patients.",
+     "rating": "Not graded"
+    }
+   ]
+  },
+  {
+   "id": "back-cancer",
+   "hub": "back",
+   "cat": "flags",
+   "title": "Red flag: cancer",
+   "takeaway": "A history of cancer is the one red flag that really moves the needle.",
+   "nums": [
+    [
+     "History of cancer",
+     "33% post-test"
+    ]
+   ],
+   "note": "Most other red flags barely change the probability on their own. Don't rely on any one question.",
+   "badge": {
+    "label": "Systematic reviews",
+    "by": "BMJ 2013, Cochrane",
+    "tone": "neutral"
+   },
+   "tags": "red flag malignancy cancer metastasis screening",
+   "studies": [
+    {
+     "cite": "Downie 2013, BMJ",
+     "url": "https://researchers.mq.edu.au/en/publications/red-flags-to-screen-for-malignancy-and-fracture-in-patients-with--2/",
+     "year": 2013,
+     "design": "Systematic review",
+     "n": "14 studies, 53 red flags",
+     "finding": "History of malignancy: highest post-test probability (33%).",
+     "rating": "Not graded"
+    },
+    {
+     "cite": "Henschke, Cochrane review",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10631455",
+     "year": 2013,
+     "design": "Systematic review",
+     "n": "",
+     "finding": "Don't base suspicion of malignancy on one red flag question.",
+     "rating": "Not graded"
+    }
+   ]
+  },
+  {
+   "id": "back-fracture",
+   "hub": "back",
+   "cat": "flags",
+   "title": "Red flag: spinal fracture",
+   "takeaway": "Older age, long-term steroids, major trauma, or a bruise or abrasion. Several together are serious.",
+   "nums": [
+    [
+     "Several flags together",
+     "~90% probability"
+    ]
+   ],
+   "badge": {
+    "label": "Systematic review",
+    "by": "BMJ 2013",
+    "tone": "neutral"
+   },
+   "tags": "fracture compression osteoporosis steroids trauma red flag",
+   "studies": [
+    {
+     "cite": "Downie 2013, BMJ",
+     "url": "https://repub.eur.nl/pub/72777/REPUB_72777_OA.pdf",
+     "year": 2013,
+     "design": "Systematic review",
+     "n": "14 studies",
+     "finding": "Multiple red flags: 90% probability of fracture (wide CI 34–99%).",
+     "rating": "Not graded"
+    }
+   ]
+  },
+  {
+   "id": "back-course",
+   "hub": "back",
+   "cat": "prog",
+   "updated": "2026-11-21",
+   "title": "Expected course of LBP",
+   "takeaway": "Acute pain roughly halves in 6 weeks, but many still have some pain at a year.",
+   "nums": [
+    [
+     "Acute: pain, start → 6 wks",
+     "56 → 26 / 100"
+    ],
+    [
+     "Acute: at 1 year",
+     "21 / 100"
+    ],
+    [
+     "Persistent: start → 1 year",
+     "56 → 40 / 100"
+    ]
+   ],
+   "note": "Useful for setting expectations: early gains are fast, then progress slows.",
+   "differ": "The 2012 review was more optimistic (acute pain 6/100 at a year). The 2024 update is larger and newer.",
+   "badge": {
+    "label": "GRADE: Moderate (acute)",
+    "by": "CMAJ 2024",
+    "tone": "mod"
+   },
+   "tags": "prognosis natural history recovery timeline course",
+   "studies": [
+    {
+     "cite": "Wallwork 2024, CMAJ",
+     "url": "https://www.cmaj.ca/content/196/2/E29",
+     "year": 2024,
+     "design": "Systematic review",
+     "n": "60 cohorts, 17,974 people",
+     "finding": "Acute pain 56 → 26 at 6 weeks → 21 at 1 year. Persistent 56 → 48 → 40.",
+     "rating": "GRADE moderate (acute); very low (persistent)"
+    },
+    {
+     "cite": "Menezes Costa 2012, CMAJ",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3414626/",
+     "year": 2012,
+     "design": "Systematic review",
+     "n": "33 cohorts, 11,166 people",
+     "finding": "Acute pain 52 → 23 at 6 weeks → 6 at 1 year. Persistent 51 → 33 → 23.",
+     "rating": "Not graded"
+    }
+   ]
+  }
+ ]
 }
